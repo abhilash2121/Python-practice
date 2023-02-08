@@ -8,9 +8,9 @@ table = dynamodb.Table("job_details")
 
 scan_kwargs = {"FilterExpression": Attr("model_version_name").eq("risk_auto_sum_1.0.1")}
 
-response = table.scan(**params)
+response = table.scan(**scan_kwargs)
 
 result = response["Items"]
 
-for i in result:
-    print(i)
+for record in result:
+    print(record)
