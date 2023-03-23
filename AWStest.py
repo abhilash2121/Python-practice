@@ -3,6 +3,8 @@ from boto3.dynamodb.conditions import Attr, Key
 from typing import Optional
 from pydantic import BaseModel, validator
 
+# this program is for testing
+
 
 class PydanticBase(BaseModel):
     @validator("*")
